@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Amazon Shift Helper</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Amazon Shift Helper</h1>
+      <p class="subtitle">Human-assisted alerts for Canada listings</p>
+
+      <label for="cities">Cities (comma separated)</label>
+      <textarea
+        id="cities"
+        rows="3"
+        placeholder="Toronto, Brampton, Mississauga"
+      ></textarea>
+
+      <label for="keywords">Optional keywords</label>
+      <input id="keywords" type="text" placeholder="Night shift, warehouse" />
+
+      <label class="checkbox-row" for="monitorEnabled">
+        <input id="monitorEnabled" type="checkbox" />
+        Enable monitoring on supported Amazon jobs tabs
+      </label>
+
+      <button id="saveBtn">Save Preferences</button>
+      <p id="status" aria-live="polite"></p>
+
+      <section class="notes">
+        <h2>Notes</h2>
+        <ul>
+          <li>You must handle login and CAPTCHA manually.</li>
+          <li>The extension only detects and alerts; you choose final actions.</li>
+        </ul>
+      </section>
+    </main>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
